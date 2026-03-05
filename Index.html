@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VentasDI-PRO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="logo">VentasDI</div>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Quiénes somos</a>
+<a href="#productos">Productos</a>
+<a href="#ubicacion">Ubicación</a>
+<a href="#pago">Pago</a>
+</nav>
+<div class="cart">
+🛒 <span id="cart-count">0</span> | Total: <span id="cart-total">0</span>€
+</div>
+</header>
+
+<section id="inicio">
+<h1>Bienvenido a VentasDI</h1>
+<p>Transformamos la manera en que compras productos y servicios de calidad.</p>
+<button onclick="scrollProductos()">Ver productos</button>
+</section>
+
+<section id="nosotros" class="fade">
+<h2>Quiénes somos</h2>
+<p>En VentasDI ofrecemos productos de alta calidad combinando innovación y atención personalizada.</p>
+</section>
+
+<section id="productos" class="fade">
+<h2>Productos</h2>
+<div id="productos-container"></div>
+</section>
+
+<section id="ubicacion" class="fade">
+<h2>Ubicación</h2>
+<p>España</p>
+<p>Correo: ventasdimn@gmail.com</p>
+</section>
+
+<section id="pago" class="fade">
+<h2>Pagar tu carrito</h2>
+<form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="ventasdimn@gmail.com">
+<input type="hidden" name="item_name" value="Compra en VentasDI">
+<input type="hidden" name="amount" id="paypal-amount" value="0">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="submit" value="Pagar con PayPal">
+</form>
+</section>
+
+<footer>
+<p>© 2026 VentasDI | Dueño: Daikel</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
